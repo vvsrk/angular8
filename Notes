@@ -1,0 +1,26 @@
+To create angular project in IntelliJ
+File -> New -> static web -> Angular Cli
+
+To install bootstrap:
+from command line ->npm install bootstrap --save
+Reference the path in angular.json under build node -> styles
+
+
+Need to look at SVC (scalable vector graphics).
+
+<!--[] - property binding-->
+<!--() - event binding-->
+
+<!--
+<p [innerText]="allowServer"> </p>
+if you want to output something, use string interpolation,
+if you want to change some property in the html attribute, use property binding.
+
+ngIf - is a structural directive.
+ngStyle - is an attribute directive, Unlike structural directive, attribute directives
+          don't add or remove elements. They only change the element they were placed on.
+-->
+
+component communication:
+if we want to access child component property from parent component, then decla
+

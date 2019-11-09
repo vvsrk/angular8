@@ -1,0 +1,17 @@
+
+<a href="#" class="list-group-item clearfix" (click)="displaySelectedRecipe()">
+  <!-- (click)="displaySelectedRecipe() inform to parent component that this recipe was selected -->
+  <div class="pull-left">
+    <h4 class="list-group-item-heading">
+      {{recipe.name}}
+    </h4>
+    <p class="list-group-item-text">{{recipe.description}}</p>
+  </div>
+  <span class="pull-right">
+      <img [src]="recipe.imagePath"
+           alt="" class="embed-responsive" style="max-height: 50px;"
+           class="img-fluid; float-right">
+  </span>
+</a>
+
+

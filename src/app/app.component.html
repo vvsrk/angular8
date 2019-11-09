@@ -1,0 +1,17 @@
+
+<app-header (featureSelected)="onNavigate($event)"></app-header>
+<!--featureSelected event listens events from child as this is parent component and
+$event is to access parameter i.e, in this case featureSelected -->
+<br>
+<div class="container">
+  <div class="row align-middle">
+    <div class="col-md-12">
+      <div *ngIf="loadedFeature === 'recipes'">
+      <app-recipes></app-recipes>
+      </div>
+      <div *ngIf="loadedFeature !== 'recipes'">
+        <app-shopping-list></app-shopping-list>
+      </div>
+    </div>
+  </div>
+</div>
