@@ -10,6 +10,8 @@ Need to look at SVC (scalable vector graphics).
 
 <!--[] - property binding-->
 <!--() - event binding-->
+two way binding
+string interpolation
 
 <!--
 <p [innerText]="allowServer"> </p>
@@ -24,3 +26,9 @@ ngStyle - is an attribute directive, Unlike structural directive, attribute dire
 component communication:
 if we want to access child component property from parent component, then decla
 
+
+Directives Overview:
+Structural directives - *ngIf, *ngfor
+Attribute directives - ngStyle, ngClass
+
+Renderer2 in directives
