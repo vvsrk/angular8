@@ -1,5 +1,32 @@
-<p>use-directives works!</p>
+<div class="container">
+  <p appHighlightDirective>Highlight me!</p>
 
-<p appHighlightDirective>Highlight me!</p>
+  <p appBetterHighlight [defaultColor]="'yellow'" highlightColor="red">Highlight me! Using Better approach</p>
 
-<p appBetterHighlight [defaultColor]="'yellow'" highlightColor="red">Highlight me! Using Better approach</p>
+  <div class="row">
+    <div class="col-xs-12">
+      <button class="btn btn-primary" (click)="show = !show">Show</button>
+    </div>
+  </div>
+<!--  <div *ngIf="show">
+    <li class="list-group-item" [ngStyle]="{backgroundColor: even % 2 == 0 ? 'light' : 'brown'}" [ngClass]="" *ngFor="let even of numbers">
+      {{even}}
+    </li>
+  </div>-->
+
+  <div *appUnless="show">
+    <li class="list-group-item" [ngStyle]="{backgroundColor: even % 2 == 0 ? 'light' : 'brown'}" [ngClass]="" *ngFor="let even of numbers">
+      {{even}}
+    </li>
+  </div>
+
+  <div class="panel-heading panel-default"> Using switch</div>
+  <div [ngSwitch]="value">
+    <p *ngSwitchCase="1">{{value}}</p>
+    <p *ngSwitchCase="10">{{value}}</p>
+    <p *ngSwitchCase="20">{{value}}</p>
+    <p *ngSwitchDefault>No value</p>
+  </div>
+
+</div>
+

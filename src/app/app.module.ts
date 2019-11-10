@@ -12,6 +12,8 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 import { UseDirectivesComponent } from './use-directives/use-directives.component';
 import { HighlightDirectiveDirective } from './customdirectives/highlight-directive.directive';
 import { BetterHighlightDirective } from './customdirectives/better-highlight.directive';
+import { UnlessDirective } from './customdirectives/unless.directive';
+import { DropdownDirective } from '../shared/dropdown.directive';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { BetterHighlightDirective } from './customdirectives/better-highlight.di
     ShoppingEditComponent,
     UseDirectivesComponent,
     HighlightDirectiveDirective,
-    BetterHighlightDirective
+    BetterHighlightDirective,
+    UnlessDirective,
+    DropdownDirective
   ],
   imports: [
     BrowserModule
