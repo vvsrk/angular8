@@ -32,3 +32,5 @@ Structural directives - *ngIf, *ngfor
 Attribute directives - ngStyle, ngClass
 
 Renderer2 in directives
+
+Cross component communication using services

@@ -8,7 +8,7 @@
     <div class="col-xs-12" *ngFor="let recipeElement of recipes">
       <!-- binding recipe to current iteration of recipe element which can be accessed outside by defining recipe as @Input-->
       <!-- and recipeSelected event is to emit to parent component i.e, recipe.component -->
-          <app-recipe-item [recipe]="recipeElement" (recipeSelected)="onRecipeSelected(recipeElement)"></app-recipe-item>
+          <app-recipe-item [recipe]="recipeElement"></app-recipe-item>
     </div>
   </div>
 

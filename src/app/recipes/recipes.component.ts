@@ -12,8 +12,12 @@ export class RecipesComponent implements OnInit {
 
   selectedRecipe: Recipe;
 
-  constructor() { }
-
+  constructor(private recipeService: RecipeService) { }
+//notify me if recipeSelected event has been emitted. recipeSelected event emits Recipe, so getting recipe on subscribe()
   ngOnInit() {
+    this.recipeService.recipeSelected
+      .subscribe((recipe: Recipe) => {
+        this.selectedRecipe = recipe;
+      })
   }
 }
