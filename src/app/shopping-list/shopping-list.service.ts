@@ -9,7 +9,7 @@ export class ShoppingListService {
   constructor() {
   }
 
-  ingredientAdded = new EventEmitter<Ingredient>();
+  ingredientAdded = new EventEmitter<Ingredient[]>();
 
   private _ingredients: Ingredient[] = [
     new Ingredient('Apple', 5),
@@ -21,8 +21,16 @@ export class ShoppingListService {
     return this._ingredients.slice();
   }
 
-  addIngrediant(ingredient: Ingredient) {
+  addIngredient(ingredient: Ingredient) {
     console.log("adding Ingredient::::"+ingredient);
     this._ingredients.push(ingredient);
+  }
+
+  addIngredients(ingredients: Ingredient[]) {
+    // for (let ingredient of ingredients) {
+    //     this.addIngredient(ingredient);
+    // }
+    this._ingredients.push(...ingredients);
+    this.ingredientAdded.emit(this.ingredients.slice())
   }
 }

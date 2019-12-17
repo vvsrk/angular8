@@ -12,6 +12,7 @@ export class BetterHighlightDirective implements OnInit{
   @Input()
   highlightColor: string;
 
+  //using HostBinding() to capture the property of the Host Element
   @HostBinding('style.backgroundColor')
   backgroundColor: string;
 
@@ -21,6 +22,7 @@ export class BetterHighlightDirective implements OnInit{
     //this.renderer.setStyle(this.element.nativeElement, 'backgroundColor', 'yellow');
   }
 
+  //using HostListener() to capture the event of the Host Element
   @HostListener('mouseenter')
   mouseover(eventData: Event) {
     //this.renderer.setStyle(this.element.nativeElement, 'backgroundColor', 'yellow');
